@@ -3,13 +3,20 @@ import { jsx, css } from "@emotion/core";
 import {
 	placeholderBg,
 	placeholderTxt,
-	border,
+  border,
+  bodyTxt,
   timestampBg,
   timestampTxt
 } from "../shared/colors";
+import {MOBILE} from '../shared/breakpoints'
 
 const cardContainer = css`
+  ${MOBILE} {
+    margin: 0 auto 48px auto;
+  }
 	font-family: Roboto, sans-serif;
+  width: 259px;
+  margin: 0 14px;
 `;
 
 const imagePlaceholder = css`
@@ -28,7 +35,8 @@ const placeholderText = css`
 `;
 
 const bodyContainer = css`
-	min-height: 243px;
+	height: 243px;
+  color: ${bodyTxt};
 	border: 1px solid ${border};
 	border-bottom: none;
 `;
@@ -43,7 +51,7 @@ const bodyTextContent = css`
   font-size: 16px;
 	margin: 0;
 	padding: 0 41px 17px 18px;
-	line-height: 150%;
+	line-height: 130%;
 `;
 
 const timestampContainer = css`
