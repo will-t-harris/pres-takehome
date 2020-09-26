@@ -1,0 +1,1 @@
+export const MOBILE = '@media (max-width: 640px)';
