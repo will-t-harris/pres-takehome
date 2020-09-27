@@ -3,21 +3,21 @@ import { jsx, css } from "@emotion/core";
 import {
 	placeholderBg,
 	placeholderTxt,
-  border,
-  bodyTxt,
-  timestampBg,
-  timestampTxt
+	border,
+	bodyTxt,
+	timestampBg,
+	timestampTxt,
 } from "../shared/colors";
-import {MOBILE} from '../shared/breakpoints'
+import { MOBILE } from "../shared/breakpoints";
 
 const cardContainer = css`
-  ${MOBILE} {
-    margin: 0 auto 3rem auto;
-  }
+	${MOBILE} {
+		margin: 0 auto 3rem auto;
+	}
 	font-family: Roboto, sans-serif;
-  width: 16.1875rem;
-  margin: 0 0.875rem;
-  list-style-type: none;
+	width: 16.1875rem;
+	margin: 0 0.875rem;
+	list-style-type: none;
 `;
 
 const imagePlaceholder = css`
@@ -37,7 +37,7 @@ const placeholderText = css`
 
 const bodyContainer = css`
 	height: 243px;
-  color: ${bodyTxt};
+	color: ${bodyTxt};
 	border: 1px solid ${border};
 	border-bottom: none;
 `;
@@ -55,9 +55,9 @@ const bodyTextContent = css`
 `;
 
 const timestampContainer = css`
-  display: flex;
-  align-items: center;
-  padding-left: 1.125rem;
+	display: flex;
+	align-items: center;
+	padding-left: 1.125rem;
 	height: 3.125rem;
 	border: 1px solid ${border};
 	border-radius: 0 0 4px 4px;
@@ -65,10 +65,10 @@ const timestampContainer = css`
 `;
 
 const timestampText = css`
-  font-size: 13px;
-  color: ${timestampTxt};
-  letter-spacing: 1%;
-`
+	font-size: 13px;
+	color: ${timestampTxt};
+	letter-spacing: 1%;
+`;
 
 export const Card = ({ bodyText }) => {
 	return (
@@ -81,8 +81,8 @@ export const Card = ({ bodyText }) => {
 				<p css={bodyTextContent}>{bodyText}</p>
 			</div>
 			<div css={timestampContainer}>
-        <p css={timestampText}>Last updated 3 mins ago</p>
-      </div>
+				<p css={timestampText}>Last updated 3 mins ago</p>
+			</div>
 		</li>
 	);
 };
