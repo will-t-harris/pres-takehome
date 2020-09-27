@@ -12,17 +12,18 @@ import {MOBILE} from '../shared/breakpoints'
 
 const cardContainer = css`
   ${MOBILE} {
-    margin: 0 auto 48px auto;
+    margin: 0 auto 3rem auto;
   }
 	font-family: Roboto, sans-serif;
-  width: 259px;
-  margin: 0 14px;
+  width: 16.1875rem;
+  margin: 0 0.875rem;
+  list-style-type: none;
 `;
 
 const imagePlaceholder = css`
 	display: flex;
 	background-color: ${placeholderBg};
-	height: 180px;
+	height: 11.25rem;
 	justify-content: center;
 	align-items: center;
 	border-radius: 4px 4px 0 0;
@@ -44,21 +45,20 @@ const bodyContainer = css`
 const bodyHeader = css`
 	font-size: 19px;
 	margin: 0;
-	padding: 23px 18px 17px 18px;
+	padding: 1.4375rem 1.125rem 1.0625rem 1.125rem;
 `;
 
 const bodyTextContent = css`
-  font-size: 16px;
 	margin: 0;
-	padding: 0 41px 17px 18px;
+	padding: 0 1.125rem 1.0625rem 1.125rem;
 	line-height: 130%;
 `;
 
 const timestampContainer = css`
   display: flex;
   align-items: center;
-  padding-left: 18px;
-	height: 50px;
+  padding-left: 1.125rem;
+	height: 3.125rem;
 	border: 1px solid ${border};
 	border-radius: 0 0 4px 4px;
 	background-color: ${timestampBg};
@@ -72,7 +72,7 @@ const timestampText = css`
 
 export const Card = ({ bodyText }) => {
 	return (
-		<div css={cardContainer}>
+		<li css={cardContainer}>
 			<div css={imagePlaceholder}>
 				<p css={placeholderText}>259x180</p>
 			</div>
@@ -83,6 +83,6 @@ export const Card = ({ bodyText }) => {
 			<div css={timestampContainer}>
         <p css={timestampText}>Last updated 3 mins ago</p>
       </div>
-		</div>
+		</li>
 	);
 };
