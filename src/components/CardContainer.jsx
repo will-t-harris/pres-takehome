@@ -9,12 +9,13 @@ const containerStyles = css`
   }
   display: flex;
   margin: 0 auto;
+  padding: 0;
 `
 
 export const CardContainer = ({children}) => {
   return (
-    <section css={containerStyles}>
+    <ul css={containerStyles}>
       {children}
-    </section>
+    </ul>
   )
 }
